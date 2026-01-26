@@ -2,3 +2,5 @@
 *.o
 zombie
 program_name
+sed
+*.replace
