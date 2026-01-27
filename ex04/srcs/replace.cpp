@@ -32,7 +32,7 @@ void	ft_replace(std::string &line, std::string s1, std::string s2)
 		first_part = line.substr(0, index);
 		last_part = line.substr(index + s1_len, line_len);
 		line = first_part + s2 + last_part;
-		index = line.find(s1);
+		index = line.find(s1, index + s2_len);
 	}
 }
 
