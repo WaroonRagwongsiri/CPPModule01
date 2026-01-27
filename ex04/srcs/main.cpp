@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	
 	if (argc != 4)
 	{
-		std::cout << INVALID_ARGS;
+		std::cerr << INVALID_ARGS;
 		return (1);
 	}
 	filename = argv[1];
@@ -32,8 +32,11 @@ int main(int argc, char **argv)
 	out_file.open((filename + ".replace").c_str());
 	if (!in_file.is_open() || !out_file.is_open())
 	{
-		std::cout << ERR_OPEN_FILES;
+		std::cerr << ERR_OPEN_FILES;
 		return (2);
 	};
+	sed(in_file, out_file, s1, s2);
+	in_file.close();
+	out_file.close();
 	return (0);
 }

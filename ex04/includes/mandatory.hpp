@@ -20,6 +20,7 @@
 # include <string>
 # include <fstream>
 
-void	ft_replace(std::string line, std::string s1, std::string s2);
+void	ft_replace(std::string &line, std::string s1, std::string s2);
+void	sed(std::ifstream &in_file, std::ofstream &out_file, std::string s1, std::string s2);
 
 #endif

@@ -19,7 +19,7 @@ SUFFIX		:=	.cpp
 INC_DIR		:=	includes/
 SRCS_DIR	:=	srcs/
 
-SRCS_FILES	:=	main
+SRCS_FILES	:=	main replace
 
 SRCS		:=	$(addsuffix $(SUFFIX), $(addprefix $(SRCS_DIR), $(SRCS_FILES)))
 OBJS		:=	$(SRCS:%$(SUFFIX)=%.o)
