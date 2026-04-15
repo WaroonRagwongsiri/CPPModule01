@@ -6,11 +6,13 @@
 /*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 21:03:21 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/01/26 21:35:14 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/04/15 17:07:35 by waroonwork@      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+#define ZOMBIE_NUM 5
 
 int	main(void)
 {
@@ -19,9 +21,9 @@ int	main(void)
 	int		i;
 
 	z1.announce();
-	horde1 = z1.zombieHorde(19, "2");
+	horde1 = z1.zombieHorde(ZOMBIE_NUM, "2");
 	i = 0;
-	while (i < 19)
+	while (i < ZOMBIE_NUM)
 	{
 		horde1[i].announce();
 		++i;
