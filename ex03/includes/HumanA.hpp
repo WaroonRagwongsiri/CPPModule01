@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
+/*   By: waragwon <waragwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 22:02:25 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/01/26 22:45:02 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/04/15 14:25:04 by waragwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,11 @@ class HumanA
 {
 	private:
 		std::string name;
-		Weapon *weapon;
+		Weapon &weapon;
 	public:
 		HumanA(std::string name, Weapon &weapon);
-		HumanA(const HumanA& other);
-		HumanA& operator=(const HumanA& other);
 		~HumanA();
 		void attack();
-		void setWeapon(Weapon &weapon);
 };
 
 #endif

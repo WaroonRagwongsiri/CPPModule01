@@ -3,35 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: waroonwork@gmail.com <WaroonRagwongsiri    +#+  +:+       +#+        */
+/*   By: waragwon <waragwon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 22:08:13 by waroonwork@       #+#    #+#             */
-/*   Updated: 2026/01/26 22:45:33 by waroonwork@      ###   ########.fr       */
+/*   Updated: 2026/04/15 14:25:21 by waragwon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon &weapon)
+HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
 {
-	this->name = name;
-	this->weapon = &weapon;
-}
-
-HumanA::HumanA(const HumanA& other)
-{
-	this->name = other.name;
-	this->weapon = other.weapon;
-}
-
-HumanA& HumanA::operator=(const HumanA& other)
-{
-	if (this != &other)
-	{
-		this->name = other.name;
-		this->weapon = other.weapon;
-	}
-	return (*this);
 }
 
 HumanA::~HumanA()
@@ -40,10 +22,5 @@ HumanA::~HumanA()
 
 void HumanA::attack()
 {
-	std::cout << this->name << " attacks with their " << this->weapon->get_type() << std::endl;
-}
-
-void HumanA::setWeapon(Weapon &weapon)
-{
-	this->weapon = &weapon;
+	std::cout << this->name << " attacks with their " << this->weapon.get_type() << std::endl;
 }
